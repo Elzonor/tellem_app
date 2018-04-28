@@ -1,0 +1,13 @@
+<div>
+	<h1>Nuovo Post</h1>
+	
+	<% form_for(@new_post) do |f| %>
+		<%= f.text_field :post_title %>
+		<%= f.text_field :post_quote %>
+		<%= f.text_field :post_body %>
+		<%= f.submit "Pubblica post" %>
+	<% end %>
+	
+	<%= link_to "Annulla e torna indietro", posts_path %>
+	
+</div>

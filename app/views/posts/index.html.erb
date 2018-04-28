@@ -1,0 +1,13 @@
+<div>
+	<h1>La tua coach parla con te!</h1>
+	
+	<% @posts.each do |p| %>
+		<div class="post">
+			<h2><%= t.post_quote %></h2>
+			<p><%= t.post_body %></p>
+		</div>
+	<% end %>
+	
+	<%= link_to "Nuovo Post", new_post_path %>
+	
+</div>
