@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 			redirect_to @posts
 		else
 			render new
+			puts "+++++ ERROR +++++"
 		end
 	end
 	
