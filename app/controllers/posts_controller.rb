@@ -17,10 +17,10 @@ class PostsController < ApplicationController
 		if
 			@new_post.save
 			puts "-------- Hello! --------"
-			redirect_to index
+			render "index"
 		else
 			puts "-------- Meh... --------"
-			render new
+			render "new"
 		end
 	end
 
