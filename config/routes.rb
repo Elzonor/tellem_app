@@ -10,5 +10,9 @@ Rails.application.routes.draw do
 	get "/new" => "posts#new"
 	
 	post "/create" => "posts#create"
+	
+	patch "/posts/:id" => "posts#update"
+		
+	delete "/posts/:id" => "posts#destroy"
 
 end

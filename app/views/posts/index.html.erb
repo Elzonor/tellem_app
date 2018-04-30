@@ -11,7 +11,8 @@
 				<p><%= p.post_quote %></p>
 			</div>
 			
-			<%= link_to "Continua a leggere...", post_path(p) %>
+			<p><%= link_to "Continua a leggere...", post_path(p) %></p>
+			<p><%= link_to "Modifica", edit_post_path(p) %> | <%= link_to "Cancella", post_path(p), :data => {:confirm => "Cancello questo post?", :method => "delete"} %></p>
 			
 		<% end %>
 	</div>
