@@ -13,11 +13,11 @@ class PostsController < ApplicationController
 	end
 	
 	def create
-		@new_post = Post.new
+		@new_post = Post.create
 		if
 			@new_post.save
 			puts "-------- Hello! --------"
-			render "index"
+			redirect_to action: "index"
 		else
 			puts "-------- Meh... --------"
 			render "new"

@@ -1,13 +1,11 @@
 <div>
 	<h1>All posts</h1>
-	
-	<p><%= link_to "Nuovo post", new_post_path %></p>
-	
-	<hr>
 		
 	<div id="all-post">
 		<% @posts.each do |p| %>
 			
+			<hr>
+
 			<div class="post">
 				<h2><%= link_to p.post_title, post_path(p) %></h2>
 				<p><%= p.post_quote %></p>
@@ -15,8 +13,6 @@
 			
 			<%= link_to "Continua a leggere...", post_path(p) %>
 			
-			<hr>
-
 		<% end %>
 	</div>
 	
