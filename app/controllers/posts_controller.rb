@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	def index
 		@posts = Post.all
 	end
-	
+
 	def show
 		@post = Post.find(params[:id])
 	end
@@ -13,18 +13,20 @@ class PostsController < ApplicationController
 	end
 	
 	def create
-		@new_post = Post.new(post_params)
-		if @new_post.save
-			redirect_to @posts
+		@new_post = Post.new
+		if
+			@new_post.save
+			puts "-------- Hello! --------"
+			redirect_to index
 		else
+			puts "-------- Meh... --------"
 			render new
-			puts "+++++ ERROR +++++"
 		end
 	end
-	
+
 	private
 	def post_params
-		params.require(:post_title).require(:post_quote).require(:post_body)
+		params.require(:post_title, :post_quote, :post_body)
 	end
-	
+
 end

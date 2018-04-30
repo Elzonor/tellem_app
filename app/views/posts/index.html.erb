@@ -1,13 +1,23 @@
 <div>
-	<h1>La tua coach parla con te!</h1>
+	<h1>All posts</h1>
 	
-	<% @posts.each do |p| %>
-		<div class="post">
-			<h2><%= t.post_quote %></h2>
-			<p><%= t.post_body %></p>
-		</div>
-	<% end %>
+	<p><%= link_to "Nuovo post", new_post_path %></p>
 	
-	<%= link_to "Nuovo Post", new_post_path %>
+	<hr>
+		
+	<div id="all-post">
+		<% @posts.each do |p| %>
+			
+			<div class="post">
+				<h2><%= link_to p.post_title, post_path(p) %></h2>
+				<p><%= p.post_quote %></p>
+			</div>
+			
+			<%= link_to "Continua a leggere...", post_path(p) %>
+			
+			<hr>
+
+		<% end %>
+	</div>
 	
 </div>
