@@ -1,18 +1,18 @@
 <div>
 	<h1>Nuovo Post</h1>
 	
-	<%= form_for(@new_post) do |f| %>
+	<%= form_for(@post) do |f| %>
 		<div class="field">
-			<!-- <%= f.label :post_title %> -->
-			<%= f.text_field(:post_title, size: 55) %>
+			<%= f.label :post_title, "Titolo" %><br>
+			<%= f.text_field(:post_title, size: 55) %><br><br>
 		</div>
 		<div class="field">
-			<!-- <%= f.label :post_quote %> -->
-			<%= f.text_area(:post_quote, cols: 55, rows: 5) %>
+			<%= f.label :post_quote, "Citazione (opzionale)" %><br>
+			<%= f.text_area(:post_quote, cols: 55, rows: 5) %><br><br>
 		</div>
 		<div class="field">
-			<!-- <%= f.label :post_body %> -->
-			<%= f.text_area(:post_body, cols: 55, rows: 13) %>
+			<%= f.label :post_body, "Contenuto" %><br>
+			<%= f.text_area(:post_body, cols: 55, rows: 13) %><br><br>
 		</div>
 		<div class="action">
 			<%= f.submit "Pubblica post" %>
