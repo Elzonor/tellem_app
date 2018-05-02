@@ -13,13 +13,12 @@ class PostsController < ApplicationController
 	end
 	
 	def create
-		@post = Post.create
-		if
-			@post.save(post_params)
-			redirect_to action: "index"
-		else
-			render :new
-		end
+		@post = Post.create(post_params)
+ 		if @post.save
+ 			redirect_to(@post)
+ 		else
+ 			render :new
+ 		end
 	end
 	
 	def edit
@@ -29,7 +28,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
 		if @post.update(post_params)
-			redirect_to posts_path
+			redirect_to(@post)
 		else
 			render :edit
 		end
@@ -43,7 +42,7 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post_title, :post_body).permit(:post_quote)
+			params.require(:post).permit(:post_title, :post_body, :post_quote)
 		end
 
 end

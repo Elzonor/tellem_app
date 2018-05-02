@@ -1,7 +1,7 @@
 <div>
 	<h1>Nuovo Post</h1>
 	
-	<%= form_for(@post) do |f| %>
+	<%= form_for @post do |f| %>
 		<div class="field">
 			<%= f.label :post_title, "Titolo" %><br>
 			<%= f.text_field(:post_title, size: 55) %><br><br>
