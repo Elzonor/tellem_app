@@ -12,7 +12,7 @@
 			</div>
 			
 			<p><%= link_to "Continua a leggere...", post_path(p) %></p>
-			<p><%= link_to "Modifica", edit_post_path(p) %> | <%= link_to "Cancella", post_path(p), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></p>
+			<p><%= link_to "Modifica", edit_post_path(p) %> · <%= link_to "Cancella", post_path(p), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></p>
 			
 		<% end %>
 	</div>

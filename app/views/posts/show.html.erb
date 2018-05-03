@@ -1,5 +1,5 @@
 <div>
-	<h1> <%= @post.post_title %> </h1>
+	<h1> <%= @post.post_title %> <span><%= link_to "Modifica", edit_post_path(@post) %> · <%= link_to "Cancella", post_path(@post), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></span></h1>
 	
 	<div class="post">
 		
