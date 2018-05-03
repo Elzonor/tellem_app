@@ -2,8 +2,15 @@
 	<h1> <%= @post.post_title %> </h1>
 	
 	<div class="post">
-		<p><%= @post.post_quote %></p>
-		<p><%= simple_format(@post.post_body) %></p>
+		
+		<div class="post_quote">
+			<%= simple_format(@post.post_quote) %>
+		</div>
+		
+		<div class="post_body">
+			<%= simple_format(@post.post_body) %>
+		</div>
+		
 	</div>
 	
 </div>
