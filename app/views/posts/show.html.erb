@@ -3,7 +3,7 @@
 	
 	<div class="post">
 		<p><%= @post.post_quote %></p>
-		<p><%= @post.post_body %></p>
+		<p><%= simple_format(@post.post_body) %></p>
 	</div>
 	
 </div>
