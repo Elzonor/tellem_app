@@ -1,5 +1,5 @@
 <div>
-	<h1>Nuovo Post</h1>
+	<h1>Modifica Post</h1>
 	
 	<%= form_for(@post) do |f| %>
 		<div class="field">
@@ -15,10 +15,8 @@
 			<%= f.text_area(:post_body, cols: 55, rows: 13) %><br><br>
 		</div>
 		<div class="action">
-			<%= f.submit "Salva modifiche" %>
+			<%= f.submit "Salva modifiche" %> <span class="nav-alternative-separator">oppure</span> <%= link_to "Annulla e torna indietro", :back %>
 		</div>
 	<% end %>
-	
-	<%= link_to "Annulla e torna indietro", posts_path %>
 	
 </div>
