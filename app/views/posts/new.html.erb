@@ -18,7 +18,9 @@
 				<%= f.text_area(:post_body, cols: 55, rows: 20, class: "form-control") %>
 			</div>
 			<div class="form-group">
-				<%= f.submit "Pubblica post", class: "btn btn-primary" %> <span class="nav-alternative-separator">oppure</span> <%= link_to "Annulla e torna indietro", :back, class: "form-cancel" %>
+				<%= f.submit "Pubblica post", class: "btn btn-primary" %>
+				<span class="nav-alternative-separator"> oppure </span>
+				<%= link_to "Annulla e torna indietro", :back, class: "form-cancel" %>
 			</div>
 		<% end %>
 
