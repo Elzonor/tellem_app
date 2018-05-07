@@ -23,7 +23,17 @@ body {
 
 a:link,
 a:active {
-	color: red;
+
+}
+
+#main-content {
+	padding: 21px 0 55px;
+}
+
+footer {
+	background: #eeeeee;
+	color: #777777;
+	padding: 55px 0 144px;
 }
 
 
@@ -36,3 +46,36 @@ h1 {
 
 /* ------------- FORMS & BUTTONS ------------- */
 
+
+
+/* ------------- POST ------------- */
+
+.post {
+	margin: 34px 0;
+}
+
+.post-title {
+	margin: 0 0 13px;
+	position: relative;
+}
+
+.post-title h1,
+.post-title h2 {
+	display: inline;
+}
+
+.post-title .post-menu {
+	display: inline;
+	font-family: Arian, sans-serif;
+	font-size: 0.89em;
+}
+
+.post-title .post-menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.post-title .post-menu li {
+	display: inline;
+	margin: 0 0 0 8px;
+}
