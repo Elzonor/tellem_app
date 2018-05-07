@@ -1,4 +1,4 @@
-<div class="post container">
+<div class="container">
 	
 	<div class="col-md-12">
 
@@ -19,7 +19,7 @@
 				<%= f.text_area(:post_body, cols: 55, rows: 20, class: "form-control") %>
 			</div>
 			<div class="form-group">
-				<%= f.submit "Salva modifiche", class: "btn btn-primary" %> <span class="nav-alternative-separator">oppure</span> <%= link_to "Annulla e torna indietro", :back %>
+				<%= f.submit "Salva modifiche", class: "btn btn-primary" %> <span class="nav-alternative-separator">oppure</span> <%= link_to "Annulla e torna indietro", :back, class: "form-cancel" %>
 			</div>
 		
 		<% end %>
