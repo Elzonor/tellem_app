@@ -1,23 +1,28 @@
-<div>
-	<h1>Tutti i post</h1>
-		
-	<div id="all-post">
-		<% @posts.each do |p| %>
-			
-			<hr>
+<div class="post container">
+	
+	<div class="col-md-12">
 
-			<div class="post">
-				<h2><%= link_to p.post_title, post_path(p) %></h2>
-				<p><%= p.post_quote %></p>
-			</div>
+		<h1>Tutti i post</h1>
+		
+		<div id="all-post">
+			<% @posts.each do |p| %>
 			
-			<p><%= link_to "Continua a leggere...", post_path(p) %></p>
-			<ul>
-				<li><%= link_to "Modifica", edit_post_path(p) %></li>
-				<li><%= link_to "Cancella", post_path(p), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></li>
-			</ul>
+				<hr>
+
+				<div class="post">
+					<h2><%= link_to p.post_title, post_path(p) %></h2>
+					<p><%= p.post_quote %></p>
+				</div>
 			
-		<% end %>
+				<p><%= link_to "Continua a leggere...", post_path(p) %></p>
+				<ul>
+					<li><%= link_to "Modifica", edit_post_path(p) %></li>
+					<li><%= link_to "Cancella", post_path(p), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></li>
+				</ul>
+			
+			<% end %>
+		</div>
+	
 	</div>
 	
 </div>

@@ -1,20 +1,23 @@
-<div>
-	<h1> <%= @post.post_title %> </h1>
-	<ul>
-		<li><%= link_to "Modifica post", edit_post_path(@post) %></li>
-		<li><%= link_to "Cancella post", post_path(@post), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></li>
-	</ul>
+<div class="post container">
 	
-	<div class="post">
-		
+	<div class="col-md-12">
+
+		<div class="title">
+			<h1> <%= @post.post_title %> </h1>
+			<ul>
+				<li><%= link_to "Modifica post", edit_post_path(@post) %></li>
+				<li><%= link_to "Cancella post", post_path(@post), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"} %></li>
+			</ul>
+		</div>
+
 		<div class="post_quote">
 			<blockquote> <%= simple_format(@post.post_quote) %> </blockquote>
 		</div>
-		
+	
 		<div class="post_body">
 			<%= simple_format(@post.post_body) %>
 		</div>
-		
+	
 	</div>
 	
 </div>
