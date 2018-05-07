@@ -1,31 +1,22 @@
-<div class="container">
+<div>
+	<h1>Modifica Post</h1>
 	
-	<div class="col-md-12">
-
-		<h1>Modifica Post</h1>
-		
-		<%= form_for(@post) do |f| %>
-	
-			<div class="form-group">
-				<%= f.label :post_title, "Titolo" %>
-				<%= f.text_field(:post_title, size: 55, class: "form-control") %>
-			</div>
-			<div class="form-group">
-				<%= f.label :post_quote, "Citazione (opzionale)" %>
-				<%= f.text_area(:post_quote, cols: 55, rows: 3, class: "form-control") %>
-			</div>
-			<div class="form-group">
-				<%= f.label :post_body, "Contenuto" %>
-				<%= f.text_area(:post_body, cols: 55, rows: 20, class: "form-control") %>
-			</div>
-			<div class="form-group">
-				<%= f.submit "Salva modifiche", class: "btn btn-primary" %>
-				<span class="nav-alternative-separator"> oppure </span>
-				<%= link_to "Annulla e torna indietro", :back, class: "form-cancel" %>
-			</div>
-		
-		<% end %>
-				
-	</div>
+	<%= form_for(@post) do |f| %>
+		<div class="field">
+			<%= f.label :post_title, "Titolo" %><br>
+			<%= f.text_field(:post_title, size: 55) %><br><br>
+		</div>
+		<div class="field">
+			<%= f.label :post_quote, "Citazione (opzionale)" %><br>
+			<%= f.text_area(:post_quote, cols: 55, rows: 5) %><br><br>
+		</div>
+		<div class="field">
+			<%= f.label :post_body, "Contenuto" %><br>
+			<%= f.text_area(:post_body, cols: 55, rows: 13) %><br><br>
+		</div>
+		<div class="action">
+			<%= f.submit "Salva modifiche" %> <span class="nav-alternative-separator">oppure</span> <%= link_to "Annulla e torna indietro", :back %>
+		</div>
+	<% end %>
 	
 </div>
