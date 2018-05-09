@@ -65,7 +65,7 @@ h1 {
 }
 
 .post-title {
-	margin: 0 0 13px;
+	margin: 0 0 34px;
 	position: relative;
 }
 
@@ -88,4 +88,14 @@ h1 {
 .post-title .post-menu li {
 	display: inline;
 	margin: 0 0 0 8px;
+}
+
+blockquote {
+	background: #dd0000;
+	box-radius: 3px;
+	color: #ffffff;
+	font-size: 1.89em;
+	font-style: italic;
+	margin: 34px 0;
+	padding: 89px;
 }
