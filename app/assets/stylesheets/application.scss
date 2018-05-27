@@ -21,9 +21,8 @@ body {
 	font-family: "Georgia", serif;
 }
 
-a:link,
-a:active {
-
+a.active {
+	cursor: default;
 }
 
 #main-content {
@@ -85,7 +84,7 @@ h1 {
 .post-title .post-menu {
 	display: inline;
 	font-family: Arian, sans-serif;
-	font-size: 0.89em;
+	font-size: 0.79em;
 }
 
 .post-title .post-menu ul {
@@ -96,6 +95,11 @@ h1 {
 .post-title .post-menu li {
 	display: inline;
 	margin: 0 0 0 8px;
+	text-transform: lowercase;
+}
+
+a.delete {
+	color: #DD0000;
 }
 
 blockquote {
