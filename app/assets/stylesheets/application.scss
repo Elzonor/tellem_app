@@ -26,7 +26,7 @@ a.active {
 }
 
 #main-content {
-	padding: 21px 0 55px;
+	padding: 21px 0 89px;
 }
 
 footer {
@@ -48,8 +48,17 @@ footer {
 /* ------------- HEADER ------------- */
 
 .nav-link {
-	background: #f3f3f3;
+	background: #ffffff;
+	border: 1px solid #f3f3f3;
 	margin-left: 8px;
+}
+
+.active.nav-link {
+	border: 1px solid #007bff;
+}
+
+.nav-link:hover {
+	border-color: #007bff;
 }
 
 
@@ -123,4 +132,33 @@ blockquote {
 	padding: 89px;
 }
 
-/* --- TEST --- */
+
+
+/* ------------- TIMELINE ------------- */
+
+#timeline {
+	font-family: Arial, sans-serif;
+	font-size: 0.7987em;
+}
+
+ul.timeline-container {
+	border-left: 1px solid #cccccc;
+	list-style: none;
+	padding: 0;
+}
+
+ul.timeline-container li {
+	background: url(timeline-event-marker.svg) left top no-repeat;
+	left: -7px;
+	padding: 0px 0 34px 21px;
+	position: relative;
+}
+
+ul.timeline-container li span {
+	position: relative;
+	top: -3px;
+}
+
+ul.timeline-container li:last-child {
+	background: url(timeline-event-marker.svg) left top no-repeat #ffffff;
+}

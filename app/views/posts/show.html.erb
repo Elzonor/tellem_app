@@ -1,25 +1,47 @@
 <div class="container">
 	
-	<div class="col-md-12">
+	<div class="row">
+		
+		<div class="col-md-12">
 
-		<div class="post-title">
-			<h1> <%= @post.post_title %> </h1>
-			<ul class="post-menu">
-				<li>
-					<%= link_to "Modifica post", edit_post_path(@post) %>
-				</li>
-				<li>
-					<%= link_to "Cancella post", post_path(@post), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"}, class: "delete" %>
-				</li>
-			</ul>
+			<div class="post-title">
+				<h1> <%= @post.post_title %> </h1>
+				<ul class="post-menu">
+					<li>
+						<%= link_to "Modifica post", edit_post_path(@post) %>
+					</li>
+					<li>
+						<%= link_to "Cancella post", post_path(@post), :data => {:confirm => "La cancellazione sarà permanente...", :method => "delete"}, class: "delete" %>
+					</li>
+				</ul>
+			</div>
+			
 		</div>
 
-		<!-- <div class="post_quote">
-			<blockquote> <%= simple_format(@post.post_quote) %> </blockquote>
-		</div> -->
+		<div class="col-md-8">
+
+			<!-- <div class="post_quote">
+				<blockquote> <%= simple_format(@post.post_quote) %> </blockquote>
+			</div> -->
 	
-		<div class="post_body">
-			<%= simple_format(@post.post_body) %>
+			<div class="post_body">
+				<%= simple_format(@post.post_body) %>
+			</div>
+	
+		</div>
+	
+		<div class="col-md-4" id="timeline">
+			<ul class="timeline-container">
+				<li>
+					<span>Creato il <strong>data_creazione</strong> da <em>nome_utente</em></span>
+				</li>
+				<li>
+					<span>Modificato il <strong>data_creazione</strong> da <em>nome_utente</em></span>
+				</li>
+				<li>
+					<span>inviato il <strong>data_invio</strong> da <em>nome_utente</em> a <a href="#">numero_destinatari contatti</a></span>
+				</li>
+			</ul>
 		</div>
 	
 	</div>
