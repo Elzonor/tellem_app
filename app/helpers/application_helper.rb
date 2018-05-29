@@ -5,4 +5,6 @@ module ApplicationHelper
 		""
 	end
 	
+	$generic_title = " — Anna Vairo Coach"
+	
 end
