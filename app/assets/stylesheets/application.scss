@@ -32,7 +32,7 @@ a.active {
 footer {
 	background: #eeeeee;
 	color: #777777;
-	padding: 55px 0 144px;
+	padding: 55px 0 233px;
 }
 
 
@@ -68,6 +68,7 @@ footer {
 
 h1 {
 	font-family: "Georgia", serif;
+	margin: 0 0 34px;
 }
 
 
@@ -92,8 +93,15 @@ h1 {
 	margin: 34px 0;
 }
 
-.post-title {
+#index .post-title {
+	margin: 0 0 8px;
+}
+
+#show .post-title {
 	margin: 0 0 34px;
+}
+
+.post-title {
 	position: relative;
 }
 
@@ -121,6 +129,10 @@ h1 {
 
 a.delete {
 	color: #DD0000;
+}
+
+.post-abstract {
+	color: #777777;
 }
 
 blockquote {
