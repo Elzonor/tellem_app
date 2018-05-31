@@ -21,6 +21,11 @@ body {
 	font-family: "Georgia", serif;
 }
 
+a.link,
+a.visited {
+	text-decoration: underline;
+}
+
 a.active {
 	cursor: default;
 }
