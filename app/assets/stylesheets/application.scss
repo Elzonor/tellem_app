@@ -21,8 +21,7 @@ body {
 	font-family: "Georgia", serif;
 }
 
-a.link,
-a.visited {
+a {
 	text-decoration: underline;
 }
 
@@ -52,17 +51,18 @@ footer {
 
 /* ------------- HEADER ------------- */
 
-.nav-link {
+a.nav-link {
 	background: #ffffff;
 	border: 1px solid #f3f3f3;
 	margin-left: 8px;
+	text-decoration: none;
 }
 
-.active.nav-link {
+a.active.nav-link {
 	border: 1px solid #007bff;
 }
 
-.nav-link:hover {
+a.nav-link:hover {
 	border-color: #007bff;
 	color: #007bff;
 }
