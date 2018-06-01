@@ -35,7 +35,7 @@
 		<div class="col-md-4" id="timeline">
 			<ul class="timeline-container">
 				<li>
-					<span>Creato il <strong>data_creazione</strong> da <em>nome_utente</em></span>
+					<span>Creato il <strong><%= @post.created_at.strftime("%e %B %Y") %></strong> alle <%= @post.created_at.strftime("%H:%M") %> da <em>nome_utente</em></span>
 				</li>
 				<li>
 					<span>Modificato il <strong>data_creazione</strong> da <em>nome_utente</em></span>
