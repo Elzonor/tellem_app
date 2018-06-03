@@ -53,13 +53,15 @@ footer {
 
 a.nav-link {
 	background: #ffffff;
-	border: 1px solid #f3f3f3;
+	border-bottom: 3px solid #ffffff;
 	margin-left: 8px;
 	text-decoration: none;
 }
 
-a.active.nav-link {
-	border: 1px solid #007bff;
+a.active.nav-link,
+a.active.nav-link:hover {
+	border-bottom: 3px solid #222222;
+	color: #222222;
 }
 
 a.nav-link:hover {
