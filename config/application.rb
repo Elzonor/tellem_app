@@ -12,6 +12,9 @@ module TellemApp
     config.load_defaults 5.1
 	 
 	 config.time_zone = "Rome"
+	 
+	 config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+	 config.i18n.default_locale = :it
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
