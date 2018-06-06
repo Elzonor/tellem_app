@@ -16,6 +16,9 @@
 					<div class="post">
 						<div class="post-title">
 							<h2><%= link_to p.post_title, post_path(p) %></h2>
+							<div class="post-date">
+								<p><%= p.created_at.strftime("%e %B %Y") %></p>
+							</div>
 							<!-- <ul class="post-menu">
 								<li>
 									<%= link_to "Modifica", edit_post_path(p), class: "edit" %>
