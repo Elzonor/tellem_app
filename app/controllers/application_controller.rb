@@ -8,9 +8,4 @@ class ApplicationController < ActionController::Base
 	  I18n.locale = params[:locale] || I18n.default_locale
 	end
 	
-	def sort_by(option)
-		return @posts.all if option == "Newest"
-		return @posts.all.reverse if option == "Oldest"
-	end
-	
 end
