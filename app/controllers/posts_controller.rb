@@ -19,6 +19,7 @@ class PostsController < ApplicationController
  		else
  			render :new
  		end
+		@history_event = HistoryEvent.new(history_event_params) # creates the history_event on post creation (maybe...)
 	end
 	
 	def edit
@@ -43,6 +44,10 @@ class PostsController < ApplicationController
 	private
 		def post_params
 			params.require(:post).permit(:post_title, :post_abstract, :post_quote, :post_body, :post_info)
+		end
+		
+		def history_event_params
+			params.require(:history_event)  # defines the history_event params (maybe...)
 		end
 
 end
