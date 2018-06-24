@@ -1,0 +1,34 @@
+<% @title = "Tipologie Eventi" + $generic_title %>
+
+<div class="container" id="index">
+	
+	<div class="row">
+	
+		<div class="col-md-12">
+
+			<h1>Tipologie Eventi</h1>
+		
+			<div id="all-event-types">
+				<% @event_types.each do |item| %>
+			
+					<hr>
+
+					<div class="event-types">
+						<div class="event-types-title">
+							<div class="history-event-date">
+								<p><%= item.event_type %></p>
+								<p class="object-id">ID <%= item.object_id %></p>
+							</div>
+						</div>
+					</div>
+						
+				<% end %>
+			</div>
+	
+			<hr>
+			
+		</div>
+	
+	</div>
+	
+</div>

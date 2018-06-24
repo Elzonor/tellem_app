@@ -9,15 +9,15 @@
 			<h1>Cronologia</h1>
 		
 			<div id="all-history-events">
-				<% @history_events.each do |e| %>
+				<% @history_events.each do |item| %>
 			
 					<hr>
 
 					<div class="history-event">
 						<div class="history-event-title">
-							<h2><%= link_to e.post_title, post_path(e) %></h2>
+							<h2><%= item.object_id %></h2>
 							<div class="history-event-date">
-								<p><%= e.created_at.strftime("%e %B %Y") %></p>
+								<p><%= item.created_at.strftime("%e %B %Y") %></p>
 							</div>
 						</div>
 					</div>
