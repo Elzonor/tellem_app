@@ -10,9 +10,9 @@
 # p2 = Post.create(post_title: "Titolo 2", post_abstract: "Abstract 2", post_body: "Lorem ipsum dolor sit amet consectuetur adiscipit 2")
 # p3 = Post.create(post_title: "Titolo 3", post_abstract: "Abstract 3", post_body: "Lorem ipsum dolor sit amet consectuetur adiscipit 3")
 
-e1 = HistoryEvent.create(created_at: "01/01/2018 11:00:00")
-e2 = HistoryEvent.create(created_at: "01/02/2018 12:00:00")
-e3 = HistoryEvent.create(created_at: "01/03/2018 13:00:00")
+# e1 = HistoryEvent.create(post_id: "1", event_type_id: "1", created_at: "01/01/2018 11:00:00")
+# e2 = HistoryEvent.create(post_id: "2", event_type_id: "1", created_at: "02/02/2018 12:00:00")
+# e3 = HistoryEvent.create(post_id: "3", event_type_id: "1", created_at: "03/03/2018 13:00:00")
 
 # t1 = EventType.create(event_type: "create")
 # t2 = EventType.create(event_type: "edit")
