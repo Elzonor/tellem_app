@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625174617) do
+ActiveRecord::Schema.define(version: 20180626055859) do
 
   create_table "event_types", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20180625174617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "history_event_id"
+    t.integer "event_type_id"
+    t.index ["event_type_id"], name: "index_posts_on_event_type_id"
     t.index ["history_event_id"], name: "index_posts_on_history_event_id"
   end
 

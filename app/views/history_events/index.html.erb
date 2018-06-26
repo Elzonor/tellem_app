@@ -15,9 +15,11 @@
 
 					<div class="history-event">
 						<div class="history-event-title">
-							<h2><%= item.object_id %></h2>
+							<p class="test-code">event_type: <%= item.event_type_id %></p>
+							<p class="test-code">post_id: <%= item.post_id %></p>
 							<div class="history-event-date">
 								<p><%= item.created_at.strftime("%e %B %Y") %></p>
+								<p class="object-id">ID <%= item.id %></p>
 							</div>
 						</div>
 					</div>
