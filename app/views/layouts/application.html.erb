@@ -15,16 +15,13 @@
 				<div class="col-md-12">
 					<ul class="nav justify-content-end">
 						<li class="nav-item">
-							<%= link_to "Tutti i post", root_path, class: "nav-link" + current_class?(root_path) %>
-						</li>
-						<li class="nav-item">
-							<%= link_to "Scrivi post", new_post_path, class: "nav-link" + current_class?(new_post_path) %>
+							<%= link_to "Post", root_path, class: "nav-link" + current_class?(root_path) %>
 						</li>
 						<li class="nav-item">
 							<%= link_to "Cronologia", history_events_path, class: "nav-link" + current_class?(history_events_path) %>
 						</li>
 						<li class="nav-item">
-							<%= link_to "Tipologie Eventi", event_types_path, class: "nav-link" + current_class?(event_types_path) %>
+							<%= link_to "Eventi", event_types_path, class: "nav-link" + current_class?(event_types_path) %>
 						</li>
 					</ul>
 				</div>
