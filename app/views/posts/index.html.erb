@@ -8,7 +8,9 @@
 
 			<h1><%= $posts_title %></h1>
 			
-			<%= link_to "Scrivi nuovo post", new_post_path, class: "btn btn-primary" + current_class?(new_post_path) %>
+			<div class="local-nav">
+				<%= link_to "Scrivi nuovo post...", new_post_path, class: "btn btn-primary" + current_class?(new_post_path) %>
+			</div>
 			
 			<div id="all-post">
 				<% @posts.each do |p| %>

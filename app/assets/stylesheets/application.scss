@@ -116,6 +116,20 @@ h1 {
 
 /* ------------- POST ------------- */
 
+.local-nav {
+	margin: 0 0 34px;
+/*	position: absolute;*/
+/*	right: 0;*/
+/*	top: 0;*/
+}
+
+.local-nav a {
+	background: #ffffff;
+	border: 1px dashed #007bff;
+	color: #007bff;
+	padding: 21px 55px;
+}
+
 .post {
 	margin: 34px 0;
 }
