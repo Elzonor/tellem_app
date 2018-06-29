@@ -1,4 +1,4 @@
-<% @title = @post.post_title + $generic_title %>
+<% @title = $post_edit_title + $generic_title %>
 
 <div class="container">
 	
@@ -6,7 +6,7 @@
 	
 		<div class="col-md-12">
 
-			<h1>Modifica Post</h1>
+			<h1><%= $post_edit_title %></h1>
 		
 			<%= form_for(@post) do |f| %>
 	
