@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
  		if @post.save
  			redirect_to(@post)
+ 			@history_event = HistoryEvent.new
  		else
  			render :new
  		end
@@ -45,8 +46,4 @@ class PostsController < ApplicationController
 			params.require(:post).permit(:post_title, :post_abstract, :post_quote, :post_body)
 		end
 		
-		def history_event_params
-			params.require(:history_event)  # defines the history_event params (maybe...)
-		end
-
 end

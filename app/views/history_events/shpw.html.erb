@@ -1,0 +1,21 @@
+<% @title = $history_events_title + $generic_title %>
+
+<div class="container" id="index">
+	
+	<div class="row">
+	
+		<div class="col-md-12">
+
+			<h1><%= $history_events_title %></h1>
+
+			<div id="all-history-events">
+				<% @history_event(:id) %>
+									
+				<% end %>
+			</div>
+	
+		</div>
+	
+	</div>
+	
+</div>

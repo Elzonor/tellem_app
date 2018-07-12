@@ -5,6 +5,9 @@
 	<div class="row">
 		
 		<div class="col-md-12">
+			
+			<p class="test-code">Post 3 => post_title: <%= Post.find(3).post_title %></p>
+			<p class="test-code">Post 3 => history_event_ids: <%= Post.find(3).history_event_ids %></p>
 
 			<div class="post-title">
 				<h1> <%= @post.post_title %> </h1>
@@ -22,10 +25,6 @@
 
 		<div class="col-md-8">
 
-			<!-- <div class="post_quote">
-				<blockquote> <%= simple_format(@post.post_quote) %> </blockquote>
-			</div> -->
-	
 			<div class="post_body">
 				<%= simple_format(@post.post_body) %>
 			</div>
@@ -38,16 +37,7 @@
 				<% @post.history_events.each do |item| %>
 					<li><span><%= item.event_type_id %> ___ <strong><%= item.created_at.strftime("%e %B %Y") %></strong> ___ da <em>user_name</em></span></li>
 				<% end %>
-				
-				<!-- <li>
-					<span>Creato il <strong><%= @post.created_at.strftime("%e %B %Y") %></strong> alle <%= @post.created_at.strftime("%H:%M") %> da <em>nome_utente</em></span>
-				</li>
-				<li>
-					<span>Modificato il <strong>data_creazione</strong> da <em>nome_utente</em></span>
-				</li>
-				<li>
-					<span>inviato il <strong>data_invio</strong> da <em>nome_utente</em> a <a href="#">numero_destinatari contatti</a></span>
-				</li> -->
+
 			</ul>
 		</div>
 	

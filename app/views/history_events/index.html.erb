@@ -7,21 +7,24 @@
 		<div class="col-md-12">
 
 			<h1><%= $history_events_title %></h1>
-		
+
 			<div id="all-history-events">
 				<% @history_events.each do |item| %>
 			
 					<hr>
-
+					
 					<div class="history-event">
 						<div class="history-event-title">
+							
 							<p class="test-code">event_type: <%= item.event_type %></p>
+							
 							<p class="test-code">event_type_id: <%= item.event_type_id %></p>
-							<p class="test-code">post_id: <%= item.post_id %></p>
+							
 							<div class="history-event-date">
 								<p><%= item.created_at.strftime("%e %B %Y") %></p>
 								<p class="object-id">ID <%= item.id %></p>
 							</div>
+						
 						</div>
 					</div>
 						
