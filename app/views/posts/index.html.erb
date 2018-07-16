@@ -19,14 +19,14 @@
 
 					<div class="post">
 						<div class="post-title">
-							<h2><%= link_to p.post_title, post_path(p) %></h2>
+							<h2><%= link_to p.title, post_path(p) %></h2>
 							<div class="post-date">
 								<p><%= p.created_at.strftime("%e %B %Y") %></p>
 							</div>
 						</div>
 						
 						<div class="post-abstract">
-							<p><%= p.post_abstract + "..." %></p>
+							<p><%= p.abstract + "..." %></p>
 						</div>
 						<p class="object-id">ID <%= p.id %></p>
 					</div>

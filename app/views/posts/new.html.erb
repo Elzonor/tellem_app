@@ -10,20 +10,20 @@
 	
 			<%= form_for @post do |f| %>
 				<div class="form-group">
-					<%= f.label :post_title, $post_form_label_title %>
-					<%= f.text_field(:post_title, size: 55, class: "form-control") %>
+					<%= f.label :title, $post_form_label_title %>
+					<%= f.text_field(:title, size: 55, class: "form-control") %>
 				</div>
 				<div class="form-group">
-					<%= f.label :post_abstract, $post_form_label_abstract %>
-					<%= f.text_area(:post_abstract, cols: 55, rows: 2, class: "form-control") %>
+					<%= f.label :abstract, $post_form_label_abstract %>
+					<%= f.text_area(:abstract, cols: 55, rows: 2, class: "form-control") %>
 				</div>
 				<!-- <div class="form-group">
-					<%= f.label :post_quote, "Citazione (opzionale)" %>
-					<%= f.text_area(:post_quote, cols: 55, rows: 3, class: "form-control") %>
+					<%= f.label :quote, "Citazione (opzionale)" %>
+					<%= f.text_area(:quote, cols: 55, rows: 3, class: "form-control") %>
 				</div> -->
 				<div class="form-group">
-					<%= f.label :post_body, $post_form_label_body %>
-					<%= f.text_area(:post_body, cols: 55, rows: 10, class: "form-control") %>
+					<%= f.label :body, $post_form_label_body %>
+					<%= f.text_area(:body, cols: 55, rows: 10, class: "form-control") %>
 				</div>
 				<div class="form-group">
 					<%= f.submit "Pubblica post", class: "btn btn-primary" %>

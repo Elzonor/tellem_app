@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180628062112) do
+ActiveRecord::Schema.define(version: 20180716171908) do
 
   create_table "event_types", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "event_type"
+    t.string "typology"
     t.integer "history_event_id"
     t.index ["history_event_id"], name: "index_event_types_on_history_event_id"
   end
@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20180628062112) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "post_title"
-    t.text "post_abstract"
-    t.text "post_quote"
-    t.text "post_body"
+    t.string "title"
+    t.text "abstract"
+    t.text "quote"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "history_event_id"
