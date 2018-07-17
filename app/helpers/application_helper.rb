@@ -7,7 +7,7 @@ module ApplicationHelper
 	
 	$generic_title = " — Anna Vairo Coach"
 	
-	$posts_title = "Post"
+	$posts_title = "Posts"
 	$post_new_title = "Write new post"
 	$post_edit_title = "Edit post"
 	
