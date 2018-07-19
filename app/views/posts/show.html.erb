@@ -6,9 +6,6 @@
 		
 		<div class="col-md-12">
 			
-			<p class="test-code">Post 3 => post_title: <%= Post.find(3).title %></p>
-			<p class="test-code">Post 3 => history_event_ids: <%= Post.find(3).history_event_ids %></p>
-
 			<div class="post-title">
 				<h1> <%= @post.title %> </h1>
 				<ul class="post-menu">
@@ -35,7 +32,7 @@
 			<ul class="timeline-container">
 				
 				<% @post.history_events.each do |item| %>
-					<li><span><%= item.event_type_id %> ___ <strong><%= item.created_at.strftime("%e %B %Y") %></strong> ___ da <em>user_name</em></span></li>
+					<li><span><%= item.event_type_id %> —— <strong><%= item.created_at.strftime("%e %B %Y") %></strong> —— da <em>user_name</em></span></li>
 				<% end %>
 
 			</ul>

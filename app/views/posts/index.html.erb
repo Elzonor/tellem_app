@@ -21,7 +21,7 @@
 						<div class="post-title">
 							<h2><%= link_to p.title, post_path(p) %></h2>
 							<div class="post-date">
-								<p><%= p.created_at.strftime("%e %B %Y") %></p>
+								<p><%= p.history_events.first.created_at.strftime("%e %B %Y") %></p>
 							</div>
 						</div>
 						

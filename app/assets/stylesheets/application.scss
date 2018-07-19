@@ -125,7 +125,8 @@ h1 {
 
 .local-nav a {
 	background: #ffffff;
-	border: 3px dashed #007bff;
+	border: 2px dashed #007bff;
+	border-radius: 3px;
 	color: #007bff;
 	padding: 21px 55px;
 }
@@ -226,4 +227,16 @@ ul.timeline-container li span {
 
 ul.timeline-container li:last-child {
 	background: url(timeline-event-marker.svg) left top no-repeat #ffffff;
+}
+
+
+
+/* ------------- HISTORY ------------- */
+
+.history-event {
+	color: #cccccc;
+}
+
+.history-event span {
+	color: #222222;
 }

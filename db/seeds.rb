@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-p1 = Post.create(post_title: "Titolo 1", post_abstract: "Abstract 1", post_body: "Lorem ipsum dolor sit amet consectuetur adiscipit 1")
-p2 = Post.create(post_title: "Titolo 2", post_abstract: "Abstract 2", post_body: "Lorem ipsum dolor sit amet consectuetur adiscipit 2")
-p3 = Post.create(post_title: "Titolo 3", post_abstract: "Abstract 3", post_body: "Lorem ipsum dolor sit amet consectuetur adiscipit 3")
+p1 = Post.create(title: "First post's title", abstract: "Abstract 1", body: "Lorem ipsum dolor sit amet consectuetur adiscipit 1")
+p2 = Post.create(title: "Second post's title", abstract: "Abstract 2", body: "Lorem ipsum dolor sit amet consectuetur adiscipit 2")
+p3 = Post.create(title: "Third post's title", abstract: "Abstract 3", body: "Lorem ipsum dolor sit amet consectuetur adiscipit 3")
 
 e1 = HistoryEvent.create(post_id: "1", event_type_id: "1", created_at: "01/01/2018 11:00:00")
 e2 = HistoryEvent.create(post_id: "2", event_type_id: "1", created_at: "02/02/2018 12:00:00")
@@ -17,7 +17,7 @@ e4 = HistoryEvent.create(post_id: "3", event_type_id: "2", created_at: "04/03/20
 e5 = HistoryEvent.create(post_id: "3", event_type_id: "2", created_at: "05/03/2018 15:00:00")
 e6 = HistoryEvent.create(post_id: "3", event_type_id: "4", created_at: "06/03/2018 16:00:00")
 
-t1 = EventType.create(event_type: "create")
-t2 = EventType.create(event_type: "edit")
-t3 = EventType.create(event_type: "comment")
-t4 = EventType.create(event_type: "send")
+t1 = EventType.create(typology: "create")
+t2 = EventType.create(typology: "edit")
+t3 = EventType.create(typology: "comment")
+t4 = EventType.create(typology: "send")
