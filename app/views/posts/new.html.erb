@@ -26,9 +26,9 @@
 					<%= f.text_area(:body, cols: 55, rows: 10, class: "form-control") %>
 				</div>
 				<div class="form-group">
-					<%= f.submit "Pubblica post", class: "btn btn-primary" %>
-					<span class="nav-alternative-separator"> oppure </span>
-					<%= link_to "Annulla e torna indietro", :back, class: "form-cancel" %>
+					<%= f.submit $post_form_label_publish, class: "btn btn-primary" %>
+					<span class="nav-alternative-separator"> <%= $label_or %> </span>
+					<%= link_to $label_changes_cancel, :back, class: "form-cancel" %>
 				</div>
 			<% end %>
 

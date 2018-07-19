@@ -17,8 +17,10 @@ module ApplicationHelper
 	$post_form_label_body = "Body"
 	
 	$label_or = "or"
-	$lable_changes_save = "Save changes"
-	$lable_changes_cancel = "cancel and go back"
+	$label_changes_save = "Save changes"
+	$label_changes_cancel = "cancel and go back"
+
+	$label_post_delete = "delete post"
 	
 	$history_events_title ="History"
 	$event_types_title = "Events"
