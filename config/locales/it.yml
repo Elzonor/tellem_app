@@ -73,7 +73,6 @@ it:
       long: "%d %B %Y"
       short: "%d %b"
     month_names:
-    -
     - gennaio
     - febbraio
     - marzo
