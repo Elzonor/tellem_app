@@ -19,5 +19,6 @@ e6 = HistoryEvent.create(post_id: "3", event_type_id: "4", created_at: "06/03/20
 
 t1 = EventType.create(typology: "create")
 t2 = EventType.create(typology: "edit")
-t3 = EventType.create(typology: "comment")
-t4 = EventType.create(typology: "send")
+t3 = EventType.create(typology: "delete")
+t4 = EventType.create(typology: "comment")
+t5 = EventType.create(typology: "send")

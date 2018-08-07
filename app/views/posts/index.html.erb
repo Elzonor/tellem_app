@@ -1,20 +1,20 @@
 <% @title = $posts_title + $website_name %>
 
 <div class="container" id="index">
-	
+
 	<div class="row">
-	
+
 		<div class="col-md-12">
 
 			<h1><%= $posts_title %></h1>
-			
+
 			<div class="local-nav">
 				<%= link_to $post_new_title + "...", new_post_path, class: "btn btn-primary" %>
 			</div>
-			
+
 			<div id="all-post">
 				<% @posts.each do |p| %>
-			
+
 					<hr>
 
 					<div class="post">
@@ -24,18 +24,18 @@
 								<p><%= p.history_events.first.created_at.strftime("%e %B %Y") %></p>
 							</div>
 						</div>
-						
+
 						<div class="post-abstract">
 							<p><%= p.abstract + "..." %></p>
 						</div>
 						<p class="object-id">ID <%= p.id %></p>
 					</div>
-						
+
 				<% end %>
 			</div>
-	
+
 		</div>
-	
+
 	</div>
-	
+
 </div>

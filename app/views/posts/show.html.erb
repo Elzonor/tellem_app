@@ -1,11 +1,11 @@
 <% @title = @post.title + $website_name %>
 
 <div class="container" id="show">
-	
+
 	<div class="row">
-		
+
 		<div class="col-md-12">
-			
+
 			<div class="post-title">
 				<h1> <%= @post.title %> </h1>
 				<ul class="post-menu">
@@ -17,7 +17,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 		</div>
 
 		<div class="col-md-8">
@@ -25,19 +25,19 @@
 			<div class="post_body">
 				<%= simple_format(@post.body) %>
 			</div>
-	
+
 		</div>
-	
+
 		<div class="col-md-4" id="timeline">
 			<ul class="timeline-container">
-				
+
 				<% @post.history_events.each do |item| %>
 					<li><span><%= item.event_type_id %> —— <strong><%= item.created_at.strftime("%e %B %Y") %></strong> —— da <em>user_name</em></span></li>
 				<% end %>
 
 			</ul>
 		</div>
-	
+
 	</div>
-	
+
 </div>

@@ -9,6 +9,7 @@
 			<h1><%= $history_events_title %></h1>
 
 			<div id="all-history-events">
+
 				<% @history_events.each do |event| %>
 
 					<hr>
@@ -16,10 +17,8 @@
 					<div class="history-event">
 						<div class="history-event-title">
 
-							<p><%= event.event_type %></p>
-
 							<div class="history-event-date">
-								<p><span class="post-title"><%= link_to event.post.title, post_path(event.post) %></span> has been <span class="event-type">XYZ</span> on <span class="event-date"><%= event.created_at.strftime("%e %B %Y") %></span></p>
+								<p><span class="post-title"><%= link_to event.post.title, post_path(event.post) %></span> has been <span class="event-type"><%= event.event_type_id %></span> on <span class="event-date"><%= event.created_at.strftime("%e %B %Y") %></span></p>
 								<p class="object-id">ID <%= event.id %></p>
 							</div>
 
