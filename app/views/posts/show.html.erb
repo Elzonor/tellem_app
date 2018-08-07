@@ -31,8 +31,8 @@
 		<div class="col-md-4" id="timeline">
 			<ul class="timeline-container">
 
-				<% @post.history_events.each do |item| %>
-					<li><span><%= item.event_type_id %> —— <strong><%= item.created_at.strftime("%e %B %Y") %></strong> —— da <em>user_name</em></span></li>
+				<% @post_history.each do |item| %>
+					<li><span><%= item.event_type_id %> —— <strong><%= item.created_at.strftime("%e %B %Y") %></strong> at <strong><%= item.created_at.strftime("%H:%M") %></strong> —— da <em>user_name</em></span></li>
 				<% end %>
 
 			</ul>
