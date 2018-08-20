@@ -1,15 +1,15 @@
 <% @title = $post_edit_title + $website_name %>
 
 <div class="container">
-	
+
 	<div class="row">
-	
+
 		<div class="col-md-12">
 
 			<h1><%= $post_edit_title %></h1>
-		
+
 			<%= form_for(@post) do |f| %>
-	
+
 				<div class="form-group">
 					<%= f.label :title, $post_form_label_title %>
 					<%= f.text_field(:title, size: 55, class: "form-control") %>
@@ -27,15 +27,15 @@
 					<%= f.text_area(:body, cols: 55, rows: 10, class: "form-control") %>
 				</div>
 				<div class="form-group">
-					<%= f.submit $post_form_label_publish, class: "btn btn-primary" %>
+					<%= f.submit $label_changes_save, class: "btn btn-primary" %>
 					<span class="nav-alternative-separator"> <%= $label_or %> </span>
 					<%= link_to $label_changes_cancel, :back, class: "form-cancel" %>
 				</div>
-		
+
 			<% end %>
-				
+
 		</div>
-		
+
 	</div>
-	
+
 </div>

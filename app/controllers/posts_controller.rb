@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		@event_new = @post.history_events.new(post_id: @post.id, event_type_id: 1)
- 		if @post.save && @event_new
+ 		if @post.save && @event_new.save
  			redirect_to(@post)
  		else
  			render :new
@@ -30,17 +30,27 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
 		@event_edit = @post.history_events.new(post_id: @post.id, event_type_id: 2)
-		if @post.update(post_params) && @event_edit
+		if @post.update(post_params) && @event_edit.save
 			redirect_to(@post)
 		else
 			render :edit
 		end
 	end
 
+	def trash
+		@post = Post.find(params[:id])
+		@post_events = HistoryEvent.where(post_id: @post.id)
+		@post.event_type_id = 6
+		@post_events.event_type_id = 6
+	end
+
 	def destroy
 		@post = Post.find(params[:id])
+		@post_events = HistoryEvent.where(post_id: @post.id)
+		@post_events.each do |event|
+			event.destroy
+		end
 		@post.destroy
-		@event_delete = @post.history_events.new(post_id: @post.id, event_type_id: 3)
 		redirect_to posts_path
 	end
 

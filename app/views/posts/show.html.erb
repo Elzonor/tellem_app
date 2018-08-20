@@ -32,7 +32,7 @@
 			<ul class="timeline-container">
 
 				<% @post_history.each do |item| %>
-					<li><span><%= item.event_type_id %> —— <strong><%= item.created_at.strftime("%e %B %Y") %></strong> at <strong><%= item.created_at.strftime("%H:%M") %></strong> —— da <em>user_name</em></span></li>
+					<li><span><%= item.event_type_id %> —— on <strong><%= item.created_at.strftime("%e %B %Y") %></strong> at <strong><%= item.created_at.strftime("%H:%M") %></strong> by <em>user_name</em></span></li>
 				<% end %>
 
 			</ul>
