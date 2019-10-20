@@ -23,3 +23,7 @@ t3 = EventType.create(typology: "delete")
 t4 = EventType.create(typology: "comment")
 t5 = EventType.create(typology: "send")
 t6 = EventType.create(typology: "trash")
+
+# s1 = PostStatus.create(status: "Draft")
+# s2 = PostStatus.create(status: "Published")
+# s3 = PostStatus.create(status: "Trashed")

@@ -59,6 +59,10 @@ footer {
 	font-weight: normal;
 }
 
+hr {
+	border-top: 1px solid #eeeeee;
+}
+
 
 
 /* ------------- HEADER ------------- */
@@ -159,9 +163,11 @@ h1 {
 }
 
 .post-title .post-menu {
-	display: inline;
+	// display: inline;
 	font-family: Arian, sans-serif;
 	font-size: 0.79em;
+	margin: 13px 0;
+	padding: 0;
 }
 
 .post-title .post-menu a {
@@ -175,7 +181,7 @@ h1 {
 
 .post-title .post-menu li {
 	display: inline;
-	margin: 0 0 0 8px;
+	margin: 0 8px 0 0;
 	text-transform: lowercase;
 }
 
