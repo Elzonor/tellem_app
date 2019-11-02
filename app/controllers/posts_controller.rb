@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		@event_new = @post.history_events.new(post_id: @post.id, event_type_id: 1)
+		@event_new = @post.history_events.new(event_type_id: 1, post_id: @post.id)
  		if @post.save && @event_new.save
  			redirect_to(@post)
  		else
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		@event_edit = @post.history_events.new(post_id: @post.id, event_type_id: 2)
+		@event_edit = @post.history_events.new(event_type_id: 2, post_id: @post.id)
 		if @post.update(post_params) && @event_edit.save
 			redirect_to(@post)
 		else
